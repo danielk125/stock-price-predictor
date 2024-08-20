@@ -11,9 +11,6 @@ print(df)
 plt.plot(df['Date'], df['Close'])
 #plt.show()
 
-scaler = MinMaxScaler(feature_range=(-1,1))
-df_scaled = scaler.fit_transform(df.to_numpy()[:,1:])
-
 classifiers = ["Close", "Open", "High", "Low", "Volume", "RSI", "EMFA", "EMFM", "EMFS"]
 
 split = int(len(df) * 0.95)
